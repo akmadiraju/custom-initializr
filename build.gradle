@@ -1,0 +1,22 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.0.M2'
+	id 'java'
+	id 'maven'
+    id 'nebula.release' version '6.3.5'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.ak.initializr'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/snapshot' }
+	maven { url 'https://repo.spring.io/milestone' }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
